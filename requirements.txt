@@ -1,0 +1,12 @@
+numpy
+pandas
+scikit-learn
+joblib
+rapidfuzz
+sentence-transformers
+transformers
+torch
+fastapi
+uvicorn
+httpx
+pytest

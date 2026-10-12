@@ -1,0 +1,9 @@
+[project]
+name = "txnlp"
+version = "0.1.0"
+description = "Merchant name matching and spend categorization for card-statement descriptors"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

@@ -1,0 +1,1002 @@
+{
+  "data": {
+    "train": 2400,
+    "test_seen": 600,
+    "test_unseen": 500,
+    "resolve_test": 800,
+    "resolve_hard": 800,
+    "merchants_seen": 60,
+    "merchants_held_out": 20
+  },
+  "resolver": {
+    "standard": {
+      "fuzzy": {
+        "top1_accuracy": 1.0,
+        "ms_per_descriptor": 0.181
+      },
+      "embedding": {
+        "top1_accuracy": 0.9738,
+        "ms_per_descriptor": 1.559
+      },
+      "hybrid": {
+        "top1_accuracy": 1.0,
+        "ms_per_descriptor": 1.665
+      }
+    },
+    "hard": {
+      "fuzzy": {
+        "top1_accuracy": 0.9587,
+        "ms_per_descriptor": 0.147
+      },
+      "embedding": {
+        "top1_accuracy": 0.5775,
+        "ms_per_descriptor": 1.408
+      },
+      "hybrid": {
+        "top1_accuracy": 0.9237,
+        "ms_per_descriptor": 1.72
+      }
+    }
+  },
+  "classifier": {
+    "baseline": {
+      "train_seconds": 0.58,
+      "seen": {
+        "model": "baseline",
+        "n": 600,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "coverage": [
+          {
+            "threshold": 0.5,
+            "auto_accept_rate": 0.9983333333333333,
+            "accuracy_on_accepted": 1.0,
+            "review_rate": 0.0016666666666667052
+          },
+          {
+            "threshold": 0.6,
+            "auto_accept_rate": 0.9916666666666667,
+            "accuracy_on_accepted": 1.0,
+            "review_rate": 0.008333333333333304
+          },
+          {
+            "threshold": 0.7,
+            "auto_accept_rate": 0.9783333333333334,
+            "accuracy_on_accepted": 1.0,
+            "review_rate": 0.021666666666666612
+          },
+          {
+            "threshold": 0.8,
+            "auto_accept_rate": 0.9616666666666667,
+            "accuracy_on_accepted": 1.0,
+            "review_rate": 0.03833333333333333
+          },
+          {
+            "threshold": 0.9,
+            "auto_accept_rate": 0.93,
+            "accuracy_on_accepted": 1.0,
+            "review_rate": 0.06999999999999995
+          }
+        ],
+        "confusion": [
+          [
+            60,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            60,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            60,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            60,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            60,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            60,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            60,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            60,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            60,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            60
+          ]
+        ],
+        "report": {
+          "Dining": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 60.0
+          },
+          "Groceries": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 60.0
+          },
+          "Travel": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 60.0
+          },
+          "Transportation": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 60.0
+          },
+          "Shopping": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 60.0
+          },
+          "Entertainment": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 60.0
+          },
+          "Utilities": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 60.0
+          },
+          "Health": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 60.0
+          },
+          "Gas": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 60.0
+          },
+          "Subscriptions": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 60.0
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 600.0
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 600.0
+          }
+        }
+      },
+      "unseen": {
+        "model": "baseline",
+        "n": 500,
+        "accuracy": 0.176,
+        "macro_f1": 0.179,
+        "coverage": [
+          {
+            "threshold": 0.5,
+            "auto_accept_rate": 0.154,
+            "accuracy_on_accepted": 0.5714285714285714,
+            "review_rate": 0.846
+          },
+          {
+            "threshold": 0.6,
+            "auto_accept_rate": 0.09,
+            "accuracy_on_accepted": 0.5333333333333333,
+            "review_rate": 0.91
+          },
+          {
+            "threshold": 0.7,
+            "auto_accept_rate": 0.064,
+            "accuracy_on_accepted": 0.65625,
+            "review_rate": 0.9359999999999999
+          },
+          {
+            "threshold": 0.8,
+            "auto_accept_rate": 0.036,
+            "accuracy_on_accepted": 0.9444444444444444,
+            "review_rate": 0.964
+          },
+          {
+            "threshold": 0.9,
+            "auto_accept_rate": 0.004,
+            "accuracy_on_accepted": 1.0,
+            "review_rate": 0.996
+          }
+        ],
+        "confusion": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            25,
+            25,
+            0
+          ],
+          [
+            10,
+            13,
+            12,
+            3,
+            0,
+            2,
+            6,
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            24,
+            0,
+            0,
+            0,
+            26,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            2,
+            0,
+            36,
+            6,
+            5,
+            0
+          ],
+          [
+            11,
+            2,
+            4,
+            0,
+            1,
+            32,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            9,
+            0,
+            2,
+            0,
+            8,
+            11,
+            2,
+            4,
+            13
+          ],
+          [
+            10,
+            0,
+            0,
+            25,
+            3,
+            0,
+            8,
+            0,
+            4,
+            0
+          ],
+          [
+            8,
+            0,
+            13,
+            0,
+            5,
+            0,
+            10,
+            11,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            2,
+            0,
+            23,
+            9,
+            14,
+            2,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            15,
+            0,
+            0,
+            0,
+            13,
+            0,
+            21
+          ]
+        ],
+        "report": {
+          "Dining": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 50.0
+          },
+          "Groceries": {
+            "precision": 0.52,
+            "recall": 0.26,
+            "f1-score": 0.3466666666666667,
+            "support": 50.0
+          },
+          "Travel": {
+            "precision": 0.4528301886792453,
+            "recall": 0.48,
+            "f1-score": 0.46601941747572817,
+            "support": 50.0
+          },
+          "Transportation": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 50.0
+          },
+          "Shopping": {
+            "precision": 0.09090909090909091,
+            "recall": 0.02,
+            "f1-score": 0.03278688524590164,
+            "support": 50.0
+          },
+          "Entertainment": {
+            "precision": 0.12307692307692308,
+            "recall": 0.16,
+            "f1-score": 0.1391304347826087,
+            "support": 50.0
+          },
+          "Utilities": {
+            "precision": 0.07547169811320754,
+            "recall": 0.16,
+            "f1-score": 0.10256410256410256,
+            "support": 50.0
+          },
+          "Health": {
+            "precision": 0.14666666666666667,
+            "recall": 0.22,
+            "f1-score": 0.176,
+            "support": 50.0
+          },
+          "Gas": {
+            "precision": 0.05,
+            "recall": 0.04,
+            "f1-score": 0.044444444444444446,
+            "support": 50.0
+          },
+          "Subscriptions": {
+            "precision": 0.5675675675675675,
+            "recall": 0.42,
+            "f1-score": 0.4827586206896552,
+            "support": 50.0
+          },
+          "accuracy": 0.176,
+          "macro avg": {
+            "precision": 0.20265221350127013,
+            "recall": 0.176,
+            "f1-score": 0.17903705718691076,
+            "support": 500.0
+          },
+          "weighted avg": {
+            "precision": 0.20265221350127013,
+            "recall": 0.176,
+            "f1-score": 0.17903705718691074,
+            "support": 500.0
+          }
+        }
+      }
+    },
+    "distilbert": {
+      "seed": 0,
+      "train_seconds": 266.09,
+      "seen": {
+        "model": "distilbert",
+        "n": 600,
+        "accuracy": 0.9833,
+        "macro_f1": 0.9834,
+        "coverage": [
+          {
+            "threshold": 0.5,
+            "auto_accept_rate": 0.9833333333333333,
+            "accuracy_on_accepted": 0.9966101694915255,
+            "review_rate": 0.01666666666666672
+          },
+          {
+            "threshold": 0.6,
+            "auto_accept_rate": 0.9766666666666667,
+            "accuracy_on_accepted": 1.0,
+            "review_rate": 0.023333333333333317
+          },
+          {
+            "threshold": 0.7,
+            "auto_accept_rate": 0.975,
+            "accuracy_on_accepted": 1.0,
+            "review_rate": 0.025000000000000022
+          },
+          {
+            "threshold": 0.8,
+            "auto_accept_rate": 0.9733333333333334,
+            "accuracy_on_accepted": 1.0,
+            "review_rate": 0.026666666666666616
+          },
+          {
+            "threshold": 0.9,
+            "auto_accept_rate": 0.9683333333333334,
+            "accuracy_on_accepted": 1.0,
+            "review_rate": 0.03166666666666662
+          }
+        ],
+        "confusion": [
+          [
+            59,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            59,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            60,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            60,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            60,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            2,
+            0,
+            58,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            59,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            57,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            58,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            60
+          ]
+        ],
+        "report": {
+          "Dining": {
+            "precision": 1.0,
+            "recall": 0.9833333333333333,
+            "f1-score": 0.9915966386554622,
+            "support": 60.0
+          },
+          "Groceries": {
+            "precision": 1.0,
+            "recall": 0.9833333333333333,
+            "f1-score": 0.9915966386554622,
+            "support": 60.0
+          },
+          "Travel": {
+            "precision": 0.9523809523809523,
+            "recall": 1.0,
+            "f1-score": 0.975609756097561,
+            "support": 60.0
+          },
+          "Transportation": {
+            "precision": 0.967741935483871,
+            "recall": 1.0,
+            "f1-score": 0.9836065573770492,
+            "support": 60.0
+          },
+          "Shopping": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 60.0
+          },
+          "Entertainment": {
+            "precision": 0.9508196721311475,
+            "recall": 0.9666666666666667,
+            "f1-score": 0.9586776859504132,
+            "support": 60.0
+          },
+          "Utilities": {
+            "precision": 1.0,
+            "recall": 0.9833333333333333,
+            "f1-score": 0.9915966386554622,
+            "support": 60.0
+          },
+          "Health": {
+            "precision": 1.0,
+            "recall": 0.95,
+            "f1-score": 0.9743589743589743,
+            "support": 60.0
+          },
+          "Gas": {
+            "precision": 0.9666666666666667,
+            "recall": 0.9666666666666667,
+            "f1-score": 0.9666666666666667,
+            "support": 60.0
+          },
+          "Subscriptions": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 60.0
+          },
+          "accuracy": 0.9833333333333333,
+          "macro avg": {
+            "precision": 0.9837609226662638,
+            "recall": 0.9833333333333334,
+            "f1-score": 0.9833709556417052,
+            "support": 600.0
+          },
+          "weighted avg": {
+            "precision": 0.9837609226662638,
+            "recall": 0.9833333333333333,
+            "f1-score": 0.9833709556417051,
+            "support": 600.0
+          }
+        }
+      },
+      "unseen": {
+        "model": "distilbert",
+        "n": 500,
+        "accuracy": 0.462,
+        "macro_f1": 0.4302,
+        "coverage": [
+          {
+            "threshold": 0.5,
+            "auto_accept_rate": 0.69,
+            "accuracy_on_accepted": 0.5855072463768116,
+            "review_rate": 0.31000000000000005
+          },
+          {
+            "threshold": 0.6,
+            "auto_accept_rate": 0.598,
+            "accuracy_on_accepted": 0.6655518394648829,
+            "review_rate": 0.402
+          },
+          {
+            "threshold": 0.7,
+            "auto_accept_rate": 0.44,
+            "accuracy_on_accepted": 0.7181818181818181,
+            "review_rate": 0.56
+          },
+          {
+            "threshold": 0.8,
+            "auto_accept_rate": 0.39,
+            "accuracy_on_accepted": 0.8,
+            "review_rate": 0.61
+          },
+          {
+            "threshold": 0.9,
+            "auto_accept_rate": 0.296,
+            "accuracy_on_accepted": 0.7702702702702703,
+            "review_rate": 0.704
+          }
+        ],
+        "confusion": [
+          [
+            36,
+            0,
+            1,
+            0,
+            0,
+            0,
+            12,
+            1,
+            0,
+            0
+          ],
+          [
+            26,
+            0,
+            0,
+            0,
+            0,
+            11,
+            1,
+            0,
+            12,
+            0
+          ],
+          [
+            0,
+            0,
+            24,
+            12,
+            0,
+            0,
+            14,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            2,
+            0,
+            0,
+            33,
+            1,
+            13,
+            0
+          ],
+          [
+            25,
+            20,
+            0,
+            2,
+            0,
+            0,
+            1,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            2,
+            22,
+            25,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            12,
+            0,
+            0,
+            37,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            50,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            1,
+            0,
+            0,
+            10,
+            0,
+            35,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            3,
+            1,
+            23,
+            0,
+            0,
+            0,
+            22
+          ]
+        ],
+        "report": {
+          "Dining": {
+            "precision": 0.4044943820224719,
+            "recall": 0.72,
+            "f1-score": 0.5179856115107914,
+            "support": 50.0
+          },
+          "Groceries": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 50.0
+          },
+          "Travel": {
+            "precision": 0.7741935483870968,
+            "recall": 0.48,
+            "f1-score": 0.5925925925925926,
+            "support": 50.0
+          },
+          "Transportation": {
+            "precision": 0.058823529411764705,
+            "recall": 0.04,
+            "f1-score": 0.047619047619047616,
+            "support": 50.0
+          },
+          "Shopping": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 50.0
+          },
+          "Entertainment": {
+            "precision": 0.423728813559322,
+            "recall": 0.5,
+            "f1-score": 0.45871559633027525,
+            "support": 50.0
+          },
+          "Utilities": {
+            "precision": 0.3425925925925926,
+            "recall": 0.74,
+            "f1-score": 0.46835443037974683,
+            "support": 50.0
+          },
+          "Health": {
+            "precision": 0.9615384615384616,
+            "recall": 1.0,
+            "f1-score": 0.9803921568627451,
+            "support": 50.0
+          },
+          "Gas": {
+            "precision": 0.5645161290322581,
+            "recall": 0.7,
+            "f1-score": 0.625,
+            "support": 50.0
+          },
+          "Subscriptions": {
+            "precision": 1.0,
+            "recall": 0.44,
+            "f1-score": 0.6111111111111112,
+            "support": 50.0
+          },
+          "accuracy": 0.462,
+          "macro avg": {
+            "precision": 0.45298874565439673,
+            "recall": 0.4620000000000001,
+            "f1-score": 0.430177054640631,
+            "support": 500.0
+          },
+          "weighted avg": {
+            "precision": 0.45298874565439673,
+            "recall": 0.462,
+            "f1-score": 0.4301770546406309,
+            "support": 500.0
+          }
+        }
+      }
+    }
+  },
+  "distilbert_seeds": {
+    "seeds": 3,
+    "unseen_accuracy": [
+      0.462,
+      0.418,
+      0.478
+    ],
+    "unseen_accuracy_mean": 0.4527,
+    "unseen_accuracy_std": 0.0311,
+    "unseen_macro_f1_mean": 0.4241,
+    "seen_accuracy_mean": 0.9878
+  }
+}
